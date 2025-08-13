@@ -1,3 +1,14 @@
+/*  Write a C program to perform a linear search on an array to find a given element and count the maximum number of comparisons made during the search.
+
+Input:
+Enter the number of elements in the array: 6
+Enter the elements of the array: 5 10 15 20 25 30
+Enter the element you want to search: 20
+
+Output:
+Maximum number of comparisons is: 4
+*/
+
 #include <stdio.h>
 
 int search(int arr[], int n, int x)
