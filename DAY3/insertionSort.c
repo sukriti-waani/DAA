@@ -18,10 +18,9 @@ void insertionSort(int arr[], int n, int *comparisons)
     int key = arr[i];
     int j = i - 1;
 
-    // Each time we compare arr[j] > key, count it
     while (j >= 0)
     {
-      (*comparisons)++; // Count the comparison
+      (*comparisons)++;
       if (arr[j] > key)
       {
         arr[j + 1] = arr[j];
@@ -29,7 +28,7 @@ void insertionSort(int arr[], int n, int *comparisons)
       }
       else
       {
-        break; // No more shifting needed
+        break;
       }
     }
     arr[j + 1] = key;

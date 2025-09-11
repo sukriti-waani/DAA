@@ -6,10 +6,9 @@ int countDuplicates(int arr[], int n)
 
   for (int i = 0; i < n; i++)
   {
-    int count = 1; // reset count for each element
+    int count = 1;
     int isCounted = 0;
 
-    // check if element already counted
     for (int k = 0; k < i; k++)
     {
       if (arr[i] == arr[k])
@@ -19,7 +18,7 @@ int countDuplicates(int arr[], int n)
       }
     }
     if (isCounted)
-      continue; // skip this element if already counted
+      continue;
 
     for (int j = i + 1; j < n; j++)
     {
@@ -31,7 +30,7 @@ int countDuplicates(int arr[], int n)
 
     if (count > 1)
     {
-      dupCount++; // count element as duplicate group
+      dupCount++;
     }
   }
 

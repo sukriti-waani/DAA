@@ -11,7 +11,6 @@ Number of comparisons: 3
 
 #include <stdio.h>
 
-// Recursive Binary Search for leftmost occurrence
 int binarySearchLeftmost(int arr[], int left, int right, int key, int *comparisons)
 {
   if (left > right)
@@ -19,22 +18,12 @@ int binarySearchLeftmost(int arr[], int left, int right, int key, int *compariso
     return -1;
   }
 
-  (*comparisons)++; // Count each comparison with arr[mid]
+  (*comparisons)++;
   int mid = left + (right - left) / 2;
 
   if (arr[mid] == key)
   {
-    // Even if found, check if it's the first occurrence
-    int leftIndex = binarySearchLeftmost(arr, left, mid - 1, key, comparisons);
-
-    if (leftIndex != -1)
-    {
-      return leftIndex; // Found an earlier occurrence
-    }
-    else
-    {
-      return mid; // This is the first occurrence
-    }
+    return mid;
   }
   else if (arr[mid] > key)
   {
